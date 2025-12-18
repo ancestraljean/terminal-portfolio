@@ -20,7 +20,8 @@ Portafolio web interactivo con interfaz de Terminal Linux (TUI) construido con A
 |---------|-------------|
 | `help` | Muestra la lista de comandos disponibles |
 | `whoami` | Información profesional sobre ti |
-| `ls -skills` | Lista todas tus tecnologías y habilidades |
+| `ls` | Lista archivos y directorios |
+| `skills` | Muestra todas las tecnologías, habilidades e idiomas |
 | `experience` | Muestra tu trayectoria laboral |
 | `projects` | Lista todos tus proyectos |
 | `view <project-id>` | Visualiza detalles de un proyecto específico |
