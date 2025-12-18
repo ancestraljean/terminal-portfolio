@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "public": true,
+  "framework": "angular",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "outputDirectory": "dist/terminal-portfolio/browser"
+}
