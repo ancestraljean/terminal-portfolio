@@ -1,9 +1,10 @@
 {
-  "version": 1,
-  "public": true,
-  "framework": "angular",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
+  "framework": "angular",
   "outputDirectory": "dist/terminal-portfolio/browser"
 }
