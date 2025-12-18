@@ -1,0 +1,109 @@
+@if (isOpen && project) {
+  <!-- Modal Backdrop -->
+  <div class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+       (click)="onBackdropClick($event)">
+
+    <!-- Modal Content -->
+    <div class="bg-[#300A24] border border-[#E95420] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-[#E95420]">
+        <h2 class="text-2xl font-bold text-terminal-success">{{ project.name }}</h2>
+        <button (click)="onClose()"
+                class="text-terminal-text hover:text-terminal-error transition-colors text-2xl leading-none">
+          ×
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="px-6 py-6 space-y-6">
+
+        <!-- Status Badge -->
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full text-sm"
+                [ngClass]="{
+                  'bg-terminal-success bg-opacity-20 text-terminal-success': project.status === 'Completado',
+                  'bg-terminal-warning bg-opacity-20 text-terminal-warning': project.status !== 'Completado'
+                }">
+            {{ project.status }}
+          </span>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <h3 class="text-lg font-semibold text-terminal-prompt mb-2">Descripción</h3>
+          <p class="text-terminal-text">{{ project.description }}</p>
+        </div>
+
+        <!-- Technologies -->
+        <div>
+          <h3 class="text-lg font-semibold text-terminal-prompt mb-2">Tecnologías</h3>
+          <div class="flex flex-wrap gap-2">
+            @for (tech of project.technologies; track tech) {
+              <span class="px-3 py-1 bg-terminal-accent bg-opacity-20 text-terminal-accent rounded border border-terminal-accent border-opacity-30">
+                {{ tech }}
+              </span>
+            }
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div>
+          <h3 class="text-lg font-semibold text-terminal-prompt mb-2">Características</h3>
+          <ul class="space-y-2">
+            @for (feature of project.features; track feature) {
+              <li class="flex items-start gap-2">
+                <span class="text-terminal-success mt-1">✓</span>
+                <span class="text-terminal-text">{{ feature }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+
+        <!-- Media -->
+        @if (project.media && project.media.items.length > 0) {
+          <div>
+            <h3 class="text-lg font-semibold text-terminal-prompt mb-2">Multimedia</h3>
+
+            @if (project.media.type === 'images') {
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                @for (image of project.media.items; track image) {
+                  <div class="border border-[#E95420] rounded overflow-hidden bg-[#1a0a14] p-4 flex items-center justify-center min-h-[200px]">
+                    <span class="text-terminal-text opacity-50">
+                      🖼️ {{ image }}
+                    </span>
+                  </div>
+                }
+              </div>
+            } @else if (project.media.type === 'video') {
+              <div class="border border-[#E95420] rounded overflow-hidden bg-[#1a0a14] p-4 flex items-center justify-center min-h-[300px]">
+                <span class="text-terminal-text opacity-50">
+                  🎥 {{ project.media.items[0] }}
+                </span>
+              </div>
+            }
+          </div>
+        }
+
+        <!-- Links -->
+        <div class="flex gap-4 pt-4 border-t border-[#E95420]">
+          @if (project.github) {
+            <button (click)="openLink(project.github)"
+                    class="px-4 py-2 bg-terminal-bg border border-terminal-text text-terminal-text rounded hover:bg-terminal-text hover:text-terminal-bg transition-colors">
+              🐙 Ver en GitHub
+            </button>
+          }
+          @if (project.demo) {
+            <button (click)="openLink(project.demo)"
+                    class="px-4 py-2 bg-terminal-accent text-white rounded hover:opacity-80 transition-opacity">
+              🚀 Ver Demo
+            </button>
+          }
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+}

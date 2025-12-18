@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply bg-terminal-bg text-terminal-text font-mono overflow-hidden;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Scrollbar personalizado estilo Ubuntu */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a0a14;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E95420;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6a3d;
+  }
+}
+
+@layer components {
+  .terminal-cursor {
+    @apply inline-block w-2 h-5 bg-terminal-text animate-cursor-blink ml-1;
+  }
+
+  .terminal-line {
+    @apply mb-2;
+  }
+
+  .terminal-prompt {
+    @apply text-terminal-prompt font-bold;
+  }
+
+  .terminal-error {
+    @apply text-terminal-error;
+  }
+
+  .terminal-success {
+    @apply text-terminal-success;
+  }
+
+  .terminal-warning {
+    @apply text-terminal-warning;
+  }
+
+  .terminal-link {
+    @apply text-terminal-accent hover:underline cursor-pointer;
+  }
+}

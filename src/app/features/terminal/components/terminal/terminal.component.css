@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.terminal-container {
+  cursor: text;
+  user-select: none;
+}
+
+.terminal-output {
+  user-select: text;
+}
+
+.terminal-line {
+  word-break: break-word;
+}
+
+/* Estilo para el input */
+input::placeholder {
+  color: #6e7681;
+  opacity: 0.6;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Animación del cursor */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "whoami": {
+    "name": "Jean Bernal",
+    "role": "Senior Software Developer",
+    "bio": "Desarrollador de software senior con experiencia en backend y frontend con diversos lenguajes y frameworks; desarrollo de interfaces interactivas. Apasionado por crear experiencias de usuario excepcionales y código limpio.",
+    "location": "Madrid, España",
+    "yearsOfExperience": 7
+  },
+  "skills": {
+    "frameworks": [
+      { "name": "Nest.js", "level": "Expert", "icon": "🐱" },
+      { "name": "Spring boot", "level": "Expert", "icon": "🍃" },
+      { "name": "Symfony", "level": "Expert", "icon": "🎼" },
+      { "name": "Laravel", "level": "Expert", "icon": "📦" },
+      { "name": "Angular", "level": "Expert", "icon": "⚡" },
+      { "name": "React", "level": "Advanced", "icon": "⚛️" },
+      { "name": "Vue.js", "level": "Intermediate", "icon": "💚" },
+      { "name": "Next.js", "level": "Advanced", "icon": "▲" }
+    ],
+    "languages": [
+      { "name": "TypeScript", "level": "Expert", "icon": "🔷" },
+      { "name": "Java", "level": "Expert", "icon": "☕️" },
+      { "name": "PHP", "level": "Expert", "icon": "🅿️" },
+      { "name": "JavaScript", "level": "Expert", "icon": "📜" },
+      { "name": "HTML5", "level": "Expert", "icon": "🌐" },
+      { "name": "CSS3/SCSS", "level": "Expert", "icon": "🎨" },
+      { "name": "Python", "level": "Intermediate", "icon": "🐍" }
+    ],
+    "databases": [
+      { "name": "MySQL", "level": "Advanced", "icon": "🐬" },
+      { "name": "PostgreSQL", "level": "Advanced", "icon": "🐘" },
+      { "name": "MongoDB", "level": "Advanced", "icon": "🍃" },
+      { "name": "Redis", "level": "Intermediate", "icon": "🔴" },
+      { "name": "Firebase", "level": "Advanced", "icon": "🔥" }
+    ],
+    "tools": [
+      { "name": "Git", "level": "Expert", "icon": "🔧" },
+      { "name": "Docker", "level": "Advanced", "icon": "🐋" },
+      { "name": "AWS", "level": "Intermediate", "icon": "☁️" },
+      { "name": "Azure", "level": "Intermediate", "icon": "🔷" },
+      { "name": "Tailwind CSS", "level": "Expert", "icon": "💨" }
+    ]
+  },
+  "languages": [
+    { "name": "Español", "level": "Nativo", "icon": "🇪🇸" },
+    { "name": "Inglés", "level": "B1", "icon": "🇬🇧" },
+    { "name": "Francés", "level": "A2", "icon": "🇫🇷" }
+  ],
+  "experience": [
+    {
+      "company": "Asertivos Soluciones",
+      "role": "Desarrollador / Arquitecto de Software",
+      "period": "octubre de 2024 - noviembre de 2025",
+      "description": "Diseño de la arquitectura: Definición de la estructura del software, el flujo de datos y la interacción entre los componentes para chatbot",
+      "technologies": ["NestJS", "React", "Angular", "TypeScript", "RxJS", "Tailwind CSS", "NgRx", "Spring boot"]
+    },
+    {
+      "company": "Banco Caja Social",
+      "role": "Desarrollador Backend",
+      "period": "mayo de 2023 - septiembre de 2024",
+      "description": "Desarrollo aplicación CDT digital desde 0, desarrollo de componentes de producto de prestamo de libre consumo y cuenta de ahorros, implementación de arquitecturas limpias y uso de tecnología en la nube Azure Devops",
+      "technologies": ["Java", "TypeScript", "Jest", "NestJS", "Spring boot", "Azure"]
+    },
+    {
+      "company": "Nivelics",
+      "role": "Full Stack Developer",
+      "period": "julio de 2021 - abril de 2023",
+      "description": "Desarrollo full-stack de aplicaciones SaaS. Diseño de APIs RESTful e implementación de bases de datos.",
+      "technologies": ["React", "NestJS", "NextJS", "Express", "AWS", "DynamoDB", "MongoDB", "GraphQL"]
+    },
+    {
+      "company": "BRM",
+      "role": "Desarrollador Backend",
+      "period": "junio de 2019 - junio de 2021",
+      "description": "Desarrollado de aplicaciones web. Aplicación de Microservicios a través de contenedores Docker Desarrollo REST API (Exponiendo y consumiendo servicios). Tecnologías backend/frontend.",
+      "technologies": ["Laravel", "NodeJS", "Javascript", "Express", "AWS", "PHP", "MongoDB", "PostgreSQL", "React", "Angular", "Vue"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "terminal-portfolio",
+      "name": "Terminal Portfolio",
+      "description": "Portafolio interactivo con interfaz de terminal Linux Ubuntu. Implementa command history, tab completion y arquitectura modular.",
+      "technologies": ["Angular 18", "TypeScript", "Signals", "Tailwind CSS"],
+      "status": "En Desarrollo",
+      "github": "https://github.com/ancestraljean/terminal-portfolio",
+      "demo": "https://tu-portfolio.dev",
+      "features": [
+        "Interfaz TUI retro-moderna",
+        "Command history con flechas up/down",
+        "Tab completion inteligente",
+        "Arquitectura limpia y modular",
+        "Responsive y accesible"
+      ],
+      "media": {
+        "type": "images",
+        "items": [
+          "/assets/projects/terminal-portfolio/screenshot-1.png",
+          "/assets/projects/terminal-portfolio/screenshot-2.png"
+        ]
+      }
+    },
+    {
+      "id": "nearby-shops",
+      "name": "Nearby Shops",
+      "description": "RestFul Api para administrar tiendas con búsqueda geoespacial.",
+      "technologies": ["NestJS", "TypeScript", "Arquitectura Hexagonal", "Docker", "Swagger", "Mongo"],
+      "status": "En Desarrollo",
+      "github": "https://github.com/ancestraljean/nearby-shops",
+      "demo": "https://github.com/ancestraljean/nearby-shops",
+      "features": [
+        "Búsqueda de tiendas",
+        "Búsqueda geoespacial",
+        "Filtros avanzados"
+      ],
+      "media": {
+        "type": "images",
+        "items": [
+          "/assets/projects/analytics/shops.png",
+          "/assets/projects/shops.png"
+        ]
+      }
+    },
+    {
+      "id": "nearby-shops-client",
+      "name": "Nearby Shops Client",
+      "description": "Aplicación de interfaz de usuario (UI) que utiliza la API REST de Nearby Shops para ofrecer una experiencia interactiva de búsqueda de tiendas y localización geoespacial en el mapa.",
+      "technologies": ["Angular", "RxJS", "TypeScript"],
+      "status": "En Desarrollo",
+      "github": "https://github.com/ancestraljean/nearby-shops-client",
+      "demo": "https://github.com/ancestraljean/nearby-shops-client",
+      "features": [
+        "Búsqueda de tiendas",
+        "Búsqueda geoespacial",
+        "Filtros avanzados"
+      ],
+      "media": {
+        "type": "video",
+        "items": [
+          "/assets/projects/shops/demo.mp4"
+        ]
+      }
+    }
+  ],
+  "social": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/ancestraljean",
+      "username": "@ancestraljean",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/jbernaldev",
+      "username": "Jean Bernal",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Email",
+      "url": "ancestraljean@gmail.com",
+      "username": "ancestraljean@gmail.com",
+      "icon": "mail"
+    }
+  ],
+  "commands": {
+    "help": {
+      "description": "Muestra la lista de comandos disponibles",
+      "usage": "help"
+    },
+    "whoami": {
+      "description": "Muestra información profesional sobre mí",
+      "usage": "whoami"
+    },
+    "ls": {
+      "description": "Lista archivos y directorios",
+      "usage": "ls"
+    },
+    "skills": {
+      "description": "Muestra todas mis tecnologías, habilidades e idiomas",
+      "usage": "skills"
+    },
+    "experience": {
+      "description": "Muestra mi trayectoria laboral",
+      "usage": "experience"
+    },
+    "projects": {
+      "description": "Lista todos mis proyectos",
+      "usage": "projects"
+    },
+    "view": {
+      "description": "Visualiza detalles de un proyecto específico",
+      "usage": "view <project-id>",
+      "example": "view terminal-portfolio"
+    },
+    "social": {
+      "description": "Muestra mis enlaces de redes sociales",
+      "usage": "social"
+    },
+    "clear": {
+      "description": "Limpia la pantalla del terminal",
+      "usage": "clear"
+    }
+  }
+}

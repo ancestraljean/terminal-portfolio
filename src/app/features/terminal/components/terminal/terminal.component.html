@@ -1,0 +1,76 @@
+<div class="terminal-container h-screen w-screen flex flex-col bg-terminal-bg text-terminal-text"
+     (click)="onTerminalClick()">
+
+  <!-- Terminal Header - Ubuntu Style -->
+  <div class="terminal-header flex items-center justify-between px-4 py-2 bg-[#2C001E] border-b border-[#E95420]">
+    <div class="flex items-center gap-3">
+      <span class="text-sm font-semibold text-terminal-text">terminal&#64;portfolio:~</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="w-5 h-5 flex items-center justify-center hover:bg-[#4a0a34] rounded transition-colors">
+        <span class="text-terminal-text text-xs">─</span>
+      </button>
+      <button class="w-5 h-5 flex items-center justify-center hover:bg-[#4a0a34] rounded transition-colors">
+        <span class="text-terminal-text text-xs">□</span>
+      </button>
+      <button class="w-5 h-5 flex items-center justify-center hover:bg-[#EF2929] rounded transition-colors">
+        <span class="text-white text-xs">✕</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Terminal Output -->
+  <div #terminalOutput
+       class="terminal-output flex-1 overflow-y-auto px-4 py-4 font-mono text-sm">
+
+    @for (line of lines(); track $index) {
+      <div class="terminal-line whitespace-pre-wrap" [ngClass]="getLineClass(line)">
+        @if (hasCustomComponent(line)) {
+          <!-- Social Links -->
+          @if (line.component === 'social-link') {
+            <span class="cursor-pointer hover:underline text-terminal-accent"
+                  (click)="onSocialLinkClick(line.data)">
+              {{ line.content }}
+            </span>
+          }
+          <!-- Project Modal Trigger -->
+          @else if (line.component === 'project-modal') {
+            <span>{{ line.content }}</span>
+            <button class="ml-2 px-2 py-1 bg-terminal-accent text-white rounded hover:opacity-80 transition-opacity"
+                    (click)="onOpenProjectModal(line.data)">
+              Ver Detalles
+            </button>
+          }
+          @else {
+            {{ line.content }}
+          }
+        } @else {
+          {{ line.content }}
+        }
+      </div>
+    }
+
+  </div>
+
+  <!-- Terminal Input -->
+  <div class="terminal-input flex items-center px-4 py-3 bg-[#2C001E] border-t border-[#E95420]">
+    <span class="terminal-prompt mr-2">$</span>
+    <input #commandInput
+           type="text"
+           [(ngModel)]="currentInput"
+           (keydown)="onKeyDown($event)"
+           class="flex-1 bg-transparent outline-none border-none text-terminal-text font-mono"
+           placeholder="Escribe un comando... (help para ayuda)"
+           autocomplete="off"
+           spellcheck="false">
+    <span class="terminal-cursor"></span>
+  </div>
+
+</div>
+
+<!-- Project Modal -->
+<app-project-modal
+  [project]="selectedProject"
+  [isOpen]="isModalOpen"
+  (close)="onCloseModal()">
+</app-project-modal>
